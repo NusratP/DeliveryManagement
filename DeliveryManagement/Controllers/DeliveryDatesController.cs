@@ -63,7 +63,11 @@ namespace DeliveryManagement.Controllers
                     deliveryDate = deliveryDate.AddDays(1);
                 }
 
-                return availableDatesList.OrderBy(x => !x.isGreenProcurement);
+                if (availableDatesList.Any(x => x.deliveryDate <= DateTime.Today.AddDays(3) && x.isGreenProcurement))
+                {
+                    return availableDatesList.OrderBy(x => !x.isGreenProcurement);
+                }
+                return availableDatesList;
 
             }
             catch (Exception ex)
