@@ -1,6 +1,6 @@
 # DeliveryManagement
 
-run the project with url "https://localhost:<port>/swagger" and try it out.
+run the project with url "https://localhost:[port]/swagger" and try it out.
 pass postalCode which is in int format and product list.
 Sample product list is:
 [
